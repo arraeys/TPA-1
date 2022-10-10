@@ -1,0 +1,239 @@
+html{
+	scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Arial black;
+}
+
+.header{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(screen4.jfif);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+    z-index:3;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.menu{
+    clear:both;
+    margin-top: 25px;
+    padding: 0px 20px;
+    max-height: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: max-height .2s ease-out;
+}
+
+.menu-icon{
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.menu-icon .nav-icon{
+    background: white;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.menu-icon .nav-icon:before{
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 7px;
+}
+
+.menu-icon .nav-icon:after{
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -7px;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.menu-btn:checked ~ .menu{
+    max-height:240px;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(225deg);
+    top:0;
+}
+.menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(135deg);
+    top:0;
+}
+
+@media (min-width:53em){
+    
+    .header li{
+        float:left;
+    }
+    .header li a{
+        padding:20px 30px;
+    }
+    .header .menu{
+        clear:none;
+        float:right;
+        max-height: none;
+    }
+    .header .menu-icon{
+        display: none;
+    }
+}
+
+ul li{
+	display: inline-block;
+}
+
+ul li a{    
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 10px;
+	border: 1px solid transparent;
+	transition: 0.7s ease;
+}
+
+ul li a:hover{
+       background-color: #fff;
+       color: #000;
+}
+
+.active a{
+	background-color: #fff;
+       color: #000;
+}
+
+.logo img{
+	float: left;
+	width: 150px;
+}
+
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.title{
+	position: absolute;
+	top: 75%;
+	left: 50%;
+
+	transform: translate(-50%,-50%);
+}
+
+.title h1{
+	font-family: sans-serif;
+	color: white;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing:8px;
+    margin-bottom: 20px;
+    animation: text 3s 1;
+    position: relative;
+
+}
+
+.title h2{
+	font-family: sans-serif;
+	color: white;
+    font-size: 30px;
+}
+
+@keyframes text{
+	0%{
+		color: black;
+		margin-bottom: -40px;
+	}
+	30%{
+		letter-spacing: 25px;
+		margin-bottom: -40px;
+
+	}
+	85%{
+		letter-spacing: 8px;
+		margin-bottom: -40px
+	}
+}
+
+.button{
+	position:absolute;
+	top: 90%;
+	left:50%;
+
+	transform: translate(-50%,-50%);
+}
+
+#part2{
+	height: 100vh;
+            width: 100%;
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(screen5.png);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+}
+
+#part3{
+	 height: 100vh;
+            width: 100%;
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(screen4.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+}
+
+#part4{
+	height: 100vh;
+            width: 100%;
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(screen7.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+}
+
+#part5{
+	 height: 100vh;
+            width: 100%;
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(screen8.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+}
+
+h3{
+	font-family: arial black;
+            font-size: 50px;
+            color:white;
+            margin: 0px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+}
